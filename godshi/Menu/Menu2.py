@@ -13,7 +13,7 @@ from pygame.locals import *
 pygame.init()
 pygame.display.set_caption('Tela de Entrada')
 screen = pygame.display.set_mode((1440, 720),0,32)
-BACKGROUND = pygame.image.load('C:/Users/Aluno/Documents/Vini 3c/godshi/Menu/menu2.PNG')
+BACKGROUND = pygame.image.load('c:/Users/david_vasel-junior/Documents/Godshi/godshi/Menu/menu2.PNG')
 
 WIDTH = 1440
 HEIGHT = 720
@@ -264,19 +264,19 @@ def game3():
     class Player(pygame.sprite.Sprite):
         def __init__(self):
             pygame.sprite.Sprite.__init__(self)
-            self.image_run = [pygame.image.load('Game_01/sprites/Run__000.png').convert_alpha(),
-                            pygame.image.load('Game_01/sprites/Run__001.png').convert_alpha(),
-                            pygame.image.load('Game_01/sprites/Run__002.png').convert_alpha(),
-                            pygame.image.load('Game_01/sprites/Run__003.png').convert_alpha(),
-                            pygame.image.load('Game_01/sprites/Run__004.png').convert_alpha(),
-                            pygame.image.load('Game_01/sprites/Run__005.png').convert_alpha(),
-                            pygame.image.load('Game_01/sprites/Run__006.png').convert_alpha(),
-                            pygame.image.load('Game_01/sprites/Run__007.png').convert_alpha(),
-                            pygame.image.load('Game_01/sprites/Run__008.png').convert_alpha(),
-                            pygame.image.load('Game_01/sprites/Run__009.png').convert_alpha(),
+            self.image_run = [pygame.image.load('c:/Users/david_vasel-junior/Documents/Godshi/godshi/Game_01/sprites/Run__000.png').convert_alpha(),
+                            pygame.image.load('c:/Users/david_vasel-junior/Documents/Godshi/godshi/Game_01/sprites/Run__001.png').convert_alpha(),
+                            pygame.image.load('c:/Users/david_vasel-junior/Documents/Godshi/godshi/Game_01/sprites/Run__002.png').convert_alpha(),
+                            pygame.image.load('c:/Users/david_vasel-junior/Documents/Godshi/godshi/Game_01/sprites/Run__003.png').convert_alpha(),
+                            pygame.image.load('c:/Users/david_vasel-junior/Documents/Godshi/godshi/Game_01/sprites/Run__004.png').convert_alpha(),
+                            pygame.image.load('c:/Users/david_vasel-junior/Documents/Godshi/godshi/Game_01/sprites/Run__005.png').convert_alpha(),
+                            pygame.image.load('c:/Users/david_vasel-junior/Documents/Godshi/godshi/Game_01/sprites/Run__006.png').convert_alpha(),
+                            pygame.image.load('c:/Users/david_vasel-junior/Documents/Godshi/godshi/Game_01/sprites/Run__007.png').convert_alpha(),
+                            pygame.image.load('c:/Users/david_vasel-junior/Documents/Godshi/godshi/Game_01/sprites/Run__008.png').convert_alpha(),
+                            pygame.image.load('c:/Users/david_vasel-junior/Documents/Godshi/godshi/Game_01/sprites/Run__009.png').convert_alpha(),
                             ]
-            self.image_fall = pygame.image.load('Game_01/sprites/Fall.png').convert_alpha()
-            self.image = pygame.image.load('Game_01/sprites/Run__000.png').convert_alpha()
+            self.image_fall = pygame.image.load('c:/Users/david_vasel-junior/Documents/Godshi/godshi/Game_01/sprites/Fall.png').convert_alpha()
+            self.image = pygame.image.load('c:/Users/david_vasel-junior/Documents/Godshi/godshi/Game_01/sprites/Run__000.png').convert_alpha()
             self.rect = pygame.Rect(100, 100, 100, 100)
             self.mask = pygame.mask.from_surface(self.image)
             self.current_image = 0
@@ -299,7 +299,7 @@ def game3():
                 key = pygame.key.get_pressed()
                 if key[pygame.K_SPACE]:
                     self.rect[1] -= 30
-                    self.image = pygame.image.load('Game_01/sprites/Fly.png').convert_alpha()
+                    self.image = pygame.image.load('c:/Users/david_vasel-junior/Documents/Godshi/godshi/Game_01/sprites/Fly.png').convert_alpha()
                     self.image = pygame.transform.scale(self.image, [50, 50])
                     print('fly')
             fly(self)
@@ -314,14 +314,14 @@ def game3():
 
             def evo(self):
                 if (placar > 39):
-                    self.image = pygame.image.load('Game_01/sprites/Run__000-1.png').convert_alpha()
+                    self.image = pygame.image.load('c:/Users/david_vasel-junior/Documents/Godshi/godshi/Game_01/sprites/Run__000-1.png').convert_alpha()
                     self.image = pygame.transform.scale(self.image, [200, 200]) 
                     print('evolution')
             evo(self)
 
             def evo(self):
                 if (placar > 69):
-                    self.image = pygame.image.load('Game_01/sprites/Fly-1.png').convert_alpha()
+                    self.image = pygame.image.load('c:/Users/david_vasel-junior/Documents/Godshi/godshi/Game_01/sprites/Fly-1.png').convert_alpha()
                     self.image = pygame.transform.scale(self.image, [300, 300]) 
                     print('evolution')
 
@@ -337,7 +337,7 @@ def game3():
     class Ground(pygame.sprite.Sprite):
         def __init__(self, xpos):
             pygame.sprite.Sprite.__init__(self)
-            self.image = pygame.image.load('Game_01/sprites/ground.png').convert_alpha()
+            self.image = pygame.image.load('c:/Users/david_vasel-junior/Documents/Godshi/godshi/Game_01/sprites/ground.png').convert_alpha()
             self.image = pygame.transform.scale(self.image,(GROUND_WIDTH, GROUND_HEIGHT))
             self.rect = self.image.get_rect()
             self.rect[0] = xpos
@@ -349,7 +349,7 @@ def game3():
     class Obstacles(pygame.sprite.Sprite):
         def __init__(self, xpos, ysize):
             pygame.sprite.Sprite.__init__(self)
-            self.image = pygame.image.load('Game_01/sprites/Box.png').convert_alpha()
+            self.image = pygame.image.load('c:/Users/david_vasel-junior/Documents/Godshi/godshi/Game_01/sprites/Box.png').convert_alpha()
             self.image = pygame.transform.scale(self.image, [100, 100])
             self.rect = pygame.Rect(50, 50, 50, 50)
             self.rect[0] = xpos
@@ -363,7 +363,7 @@ def game3():
     class Coins(pygame.sprite.Sprite):
         def __init__(self, xpos, ysize):
             pygame.sprite.Sprite.__init__(self)
-            self.image = pygame.image.load('Game_01/sprites/coin.png').convert_alpha()
+            self.image = pygame.image.load('c:/Users/david_vasel-junior/Documents/Godshi/godshi/Game_01/sprites/coin.png').convert_alpha()
             self.image = pygame.transform.scale(self.image, [40, 40])
             self.rect = pygame.Rect(100, 100, 20, 20)
             self.mask = pygame.mask.from_surface(self.image)
@@ -393,7 +393,7 @@ def game3():
     game_window = pygame.display.set_mode([WIDTH, HEIGHT])
     pygame.display.set_caption('Jogo 01')
 
-    BACKGROUND = pygame.image.load('Game_01/sprites/background_03.jpg')
+    BACKGROUND = pygame.image.load('c:/Users/david_vasel-junior/Documents/Godshi/godshi/Game_01/sprites/background_03.jpg')
     BACKGROUND = pygame.transform.scale(BACKGROUND,[WIDTH, HEIGHT])
 
     playerGroup = pygame.sprite.Group()
